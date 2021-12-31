@@ -71,7 +71,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'test',
+            name: 'tests',
             message: 'Test instructions: ',
             validate: testInput => {
                 if (testInput) {
@@ -124,5 +124,29 @@ const promptUser = () => {
         },
     ])
 }
+
+const writeFile = fileContent => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('README.md', fileContent, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'File created!'
+            });
+        });
+    });
+};
 console.log('Answer the prompts to create your README.md file.')
-promptUser();
+promptUser()
+.then(answers => {
+    return generateMarkdown(answers);
+})
+.then(data => {
+    return writeFile(data);
+})
+.catch(err => {
+    console.log(err);
+})

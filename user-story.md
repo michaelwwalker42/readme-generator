@@ -1,4 +1,4 @@
-# Professional README Generator Starter Code
+# User Story
 
 [How to create a Professional README](./readme-guide.md)
 
