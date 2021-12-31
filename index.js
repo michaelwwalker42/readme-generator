@@ -20,7 +20,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Description of your project',
+            message: 'Description of your project: ',
             validate: descInput => {
                 if (descInput) {
                     return true;
@@ -32,66 +32,66 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'installation instructions',
-            message: 'Installation instructions for your project',
+            name: 'installation',
+            message: 'Installation instructions for your project: ',
             validate: instInput => {
                 if (instInput) {
                     return true;
                 } else {
-                    console.log('You must provide installation instructions for your project.');
+                    console.log('Please provide installation instructions for your project.');
                     return false;
                 }
             }
         },
         {
             type: 'input',
-            name: 'usage information',
-            message: 'Usage information for your project',
+            name: 'usage',
+            message: 'Usage information for your project: ',
             validate: usageInput => {
                 if (usageInput) {
                     return true;
                 } else {
-                    console.log('You must provide information on how to use the project.');
+                    console.log('Please provide information on how to use the project.');
                     return false;
                 }
             }
         },
         {
             type: 'input',
-            name: 'contribution guidelines',
-            message: 'Contribution guidelines',
+            name: 'contributing',
+            message: 'Contribution guidelines: ',
             validate: contInput => {
                 if (contInput) {
                     return true;
                 } else {
-                    console.log('Provide information on how to contribute to the project.');
+                    console.log('Please provide information on how to contribute to the project.');
                     return false;
                 }
             }
         },
         {
             type: 'input',
-            name: 'test instructions',
-            message: 'Test instructions',
+            name: 'test',
+            message: 'Test instructions: ',
             validate: testInput => {
                 if (testInput) {
                     return true;
                 } else {
-                    console.log('Provide test instructions for your project.');
+                    console.log('Please provide test instructions for your project.');
                     return false;
                 }
             }
         },
         {
             type: 'checkbox',
-            name: 'licenses',
-            message: 'Select the licenses for your project',
+            name: 'license',
+            message: 'Select a license for your project: ',
             choices: ['MIT', 'GNU'],
             validate: licInput => {
                 if (licInput) {
                     return true;
                 } else {
-                    console.log('Select a license for your project.');
+                    console.log('Please select a license for your project.');
                     return false;
                 }
             }
@@ -99,12 +99,12 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'github',
-            message: 'Enter your GitHub Username',
+            message: 'Enter your GitHub Username: ',
             validate: githubInput => {
                 if (githubInput) {
                     return true;
                 } else {
-                    console.log('You must enter your GitHub username.');
+                    console.log('Please enter your GitHub username.');
                     return false;
                 }
             }
@@ -112,7 +112,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'email',
-            message: 'Enter an email address where you can be reached for additional questions about your project',
+            message: 'Enter an email address where you can be reached for additional questions about your project: ',
             validate: emailInput => {
                 if (emailInput) {
                     return true;
@@ -124,3 +124,5 @@ const promptUser = () => {
         },
     ])
 }
+console.log('Answer the prompts to create your README.md file.')
+promptUser();
