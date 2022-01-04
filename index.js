@@ -83,10 +83,10 @@ const promptUser = () => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'Select a license for your project: ',
-            choices: ['MIT', 'GNU'],
+            choices: ['MIT', 'GNU', "None"],
             validate: licInput => {
                 if (licInput) {
                     return true;
@@ -127,7 +127,7 @@ const promptUser = () => {
 
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('README.md', fileContent, err => {
+        fs.writeFile('README2.md', fileContent, err => {
             if (err) {
                 reject(err);
                 return;
@@ -139,7 +139,9 @@ const writeFile = fileContent => {
         });
     });
 };
+
 console.log('Answer the prompts to create your README.md file.')
+
 promptUser()
 .then(answers => {
     return generateMarkdown(answers);
