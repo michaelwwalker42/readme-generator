@@ -17,6 +17,7 @@
   run npm i in the command line.
 
   ## Usage
+  ![readme-generator-demo](assets\images\readme-generator-usage.gif)
 
 
   ## Contributing
