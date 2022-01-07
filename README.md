@@ -17,10 +17,10 @@
   run npm i in the command line.
 
   ## Usage
-  https://watch.screencastify.com/v/4WozyrPALO7UugmI2G01
-  
-  ![readme-generator-demo](assets/images/readme-generator-usage.gif)
+  https://watch.screencastify.com/v/qP1yBWvftgIRL4DcQv3U
 
+  ![readme-generator-demo](assets/images/readme-generator-demo.gif)
+  
 
   ## Contributing
   If you wish to contribute to this project, please add my github repo as a source.
