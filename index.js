@@ -114,10 +114,10 @@ const promptUser = () => {
             name: 'email',
             message: 'Enter an email address where you can be reached for additional questions about your project: ',
             validate: emailInput => {
-                if (emailInput) {
+                if (emailInput.match(/.+@.+\..+/)) {
                     return true;
                 } else {
-                    console.log('Please enter an email address.');
+                    console.log('Please enter a valid email address.');
                     return false;
                 }
             }
